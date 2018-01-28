@@ -14,14 +14,22 @@
 #
 # See: http://www.ruby-doc.org/core-2.1.2/Array.html#method-i-count
 
+# def count_in_list(list, item_to_count)
+#   total = 0
+#   list.each do |i|
+#     if i === item_to_count
+#       total += 1
+#     end
+#   end
+#   return total
+# end
+
 def count_in_list(list, item_to_count)
-  # You'll need three things:
-  #  1. A running total of the number of times you've seen the item
-  #  2. A way to loop/iterate through the list
-  #  3. A way to add to the running total as you see the item
+list.count(item_to_count)
 end
 
 if __FILE__ == $PROGRAM_NAME
-  # I'd advise putting some sanity checks here.
-  # How else will you be sure your code does what you think it does?
+    p count_in_list(["z", "z", "b"], "z") == 2
+    p count_in_list([1, 2, 3], 4) == 0
+    p count_in_list([1, 2, 3], 1) == 1
 end
