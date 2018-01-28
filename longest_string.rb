@@ -12,10 +12,18 @@
 #   str.length == 4
 
 def longest_string(list)
-  # This is your job. :)
+  longest_word = list[0]
+  list.each do |word|
+    if word.length > longest_word.length
+      longest_word = word
+    end
+  end
+  return longest_word
 end
 
 if __FILE__ == $PROGRAM_NAME
-  # I'd advise putting some sanity checks here.
-  # How else will you be sure your code does what you think it does?
+    p longest_string(["z", "skjfhaslkdjf", "dfdf"]) == "skjfhaslkdjf"
+    p longest_string(["banana", "banana", "blank"]) == "banana"
+    p longest_string(["cake", "jake", "ant"]) == "cake"
+    p longest_string(["z", "blehhhhhh", "hippoooooooo"]) == "hippoooooooo"
 end
