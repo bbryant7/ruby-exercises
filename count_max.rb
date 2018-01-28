@@ -16,20 +16,14 @@ require_relative "./max"
 require_relative "./count_in_list"
 
 def count_max(list)
-  current_max = list[0]
-  list.each do |i|
-    if i > current_max
-      current_max = i
-    end
-
-  end
-  puts current_max
-
+  finalMax = max(list)
+  count = list.count(finalMax)
+  puts count
 end
 
 if __FILE__ == $PROGRAM_NAME
   count_max([10,1,2,10,10]) == 3
-  count_max([4,4,4,1,5],5) == 1
+  count_max([4,4,4,1,5]) == 1
   count_max([5,22,22,4]) == 2
   count_max([1,1,1]) == 3
 end
