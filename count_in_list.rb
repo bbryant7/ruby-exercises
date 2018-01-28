@@ -13,7 +13,7 @@
 # to write it yourself.
 #
 # See: http://www.ruby-doc.org/core-2.1.2/Array.html#method-i-count
-
+# OPTION 1
 # def count_in_list(list, item_to_count)
 #   total = 0
 #   list.each do |i|
@@ -23,7 +23,7 @@
 #   end
 #   return total
 # end
-
+# OPTION 2
 def count_in_list(list, item_to_count)
 list.count(item_to_count)
 end

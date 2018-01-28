@@ -20,7 +20,11 @@
 #   total = total + 70   # the value of "total" is now 102
 
 def sum(list)
-  # This is your job. :)
+  total = 0
+  list.each do |i|
+    total += i
+  end
+  return total
 end
 
 if __FILE__ == $PROGRAM_NAME
