@@ -13,21 +13,22 @@
 # This is going to be very similar to max, so don't be afraid if
 # these two methods look almost identical
 def min(list)
-  ____ = ____
-  ____.each do |____|
-    if ____
-      ____ = ____
+  current_min = list[0]
+  list.each do |i|
+    if i < current_min
+      current_min = i
+
     end
   end
-
-  return ____
+puts current_min
+  return current_min
 end
 
 if __FILE__ == $PROGRAM_NAME
   # "p" prints something to the screen in a way that's better for debugging
 
   p min([1, 2, 3]) == 1
-  p min([0, -100, 50, -200]) == -200
+  p min([0, -100, 50]) == -100
   p min([-200, -400, -100, -300]) == -400
   p min([0]) == 0
   p min([1]) == 1
